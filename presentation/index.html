@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="fr">
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - Les CTFs de Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./assets/css/github.min.css">
+    <script src="./assets/js/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Vérifie si la fenêtre est dans une iframe
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+            // Active la coloration syntaxique :
+            if (window.hljs) {
+                hljs.highlightAll();
+            } else {
+                console.error("Highlight.js non chargé !");
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Challenge #480</h3>
+                            <h2 class="section-title">Holy Cow</h2>
+                            <p>
+                                Notre aventure commence, comme c’est souvent le cas dans ce genre de projet, par une
+                                discussion autour d’un verre. Tous plus éméchés les uns que les autres, mais avec une
+                                résolution commune : “et si on faisait notre propre navigateur web !”.
+                                <br /><br />
+                                Une fois à moitié déssoulé nous avons décidé de commencer par choisir le bon moteur
+                                Javascript. Le moteur V8 est notre premier choix car il a l’avantage d’être open source.
+                                Votre tâche aujourd’hui consiste donc à vérifier, à partir du <code>git patch</code> et
+                                de
+                                l’exécutable fourni, si tout est en ordre. Pour résoudre le challenge, il est nécessaire
+                                de lire le fichier <code>flag.txt</code>.
+                                <br />
+                                <img src="./assets/images/holy-cow.jpg">
+                                <br /><br />
+                                <a target="_blank"
+                                    href="https://www.santepubliquefrance.fr/determinants-de-sante/alcool/articles/quels-sont-les-risques-de-la-consommation-d-alcool-pour-la-sante">L’abus
+                                    d’alcool est dangereux pour la santé.</a>
+                            </p>
+                            <h4>Fichiers à étudier</h4>
+                            <p>
+                                - d8<br />
+                                - holy-cow.patch<br />
+                                - snapshot_blob.bin
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>FCSC 2024</h3>
+                            <h2 class="section-title">Hackropole</h2>
+                            <p class="section-subtitle">
+                                Lien officiel :
+                                <a target="_blank"
+                                    href="https://hackropole.fr/fr/challenges/pwn/fcsc2024-pwn-holy-cow/">FCSC
+                                    2024 -
+                                    Holy Cow
+                                </a>
+                                <br />
+                                Auteur: aiolia
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Apprentissage</h3>
+                            <h2 class="section-title">Documentations et Vidéos</h2>
+                            <p class="section-subtitle">
+                                Aucune documentation pour le moment
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Aide</h3>
+                            <h2 class="section-title">Conseils et indices</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">Fil sur
+                                    le Discord</a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;"
+            aria-label="Remonter en haut de la page" title="Remonter en tête de site"></a>
+    </div>
+</body>
+
+</html>
